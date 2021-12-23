@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>简单计算器</title>
+	<style>
+        .btn{
+            width: 80px;
+            height: 50px;
+            margin: 5px;
+            font-size:18px;
+            }
+    </style>
+    <script src="02.js"></script>
+    <script src="01.js"></script>
+
+</head>
+
+<body>
+	<div style="align-content: center">
+        <div>
+            <table id="Cacularity" style="height:100%;width: 400px;display: block">
+            
+                    <tr>
+                        <td colspan="4" style="text-align:center">
+                            <h1>计算器</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align:center">
+                            <div style="width:100%">
+                                <input type="text" id="txt" style="height:15px;width:300px;margin:5px;text-align: center ;font-size: 13px">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" type="button" id="btn_can" value="π"></td>
+                        <td><input class="btn" type="button" id="btn_cle" value="Cancel"></td>
+                        <td><input class="btn" type="button" id="btn_del" value="Del"></td>
+                        <td><input class="btn op" type="button" id="btn_add" value="Clean"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn number" type="button" id="btn_1" value="1"></td>
+                        <td><input class="btn number" type="button" id="btn_2" value="2"></td>
+                        <td><input class="btn number" type="button" id="btn_3" value="3"></td>
+                        <td><input class="btn op" type="button" id="btn_reduce" value="+"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn number" type="button" id="btn_4" value="4"></td>
+                        <td><input class="btn number" type="button" id="btn_5" value="5"></td>
+                        <td><input class="btn number" type="button" id="btn_6" value="6"></td>
+                        <td><input class="btn op" type="button" id="btn_x" value="-"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn number" type="button" id="btn_7" value="7"></td>
+                        <td><input class="btn number" type="button" id="btn_8" value="8"></td>
+                        <td><input class="btn number" type="button" id="btn_9" value="9"></td>
+                        <td><input class="btn op" type="button" id="btn_c" value="*"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn number" type="button" id="btn_f" value="."></td>
+                        <td><input class="btn number" type="button" id="btn_0" value="0"></td>
+                        <td><input class="btn number" type="button" id="btn_point" value="/"></td>
+                        <td><input class="btn op" type="button" id="btn_as" value="="></td>
+                    </tr>
+                
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

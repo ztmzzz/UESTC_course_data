@@ -1,0 +1,6 @@
+http://eams.uestc.edu.cn/eams/stdElectLog!search.action
+http://eams.uestc.edu.cn/eams/courseTableForStd.action
+http://eams.uestc.edu.cn/eams/stdElectCourse!defaultPage.action?electionProfile.id=2276  A平台选课
+http://eams.uestc.edu.cn/eams/stdElectCourse!defaultPage.action?electionProfile.id=2277  B
+http://eams.uestc.edu.cn/eams/stdElectCourse!defaultPage.action?electionProfile.id=2258  C
+http://eams.uestc.edu.cn/eams/stdElectCourse!data.action?profileId=2277  数据

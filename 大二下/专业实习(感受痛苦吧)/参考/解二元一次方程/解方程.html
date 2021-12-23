@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+<title>解二元一次方程</title>
+
+</head>
+
+<body>
+	<script type="text/javascript">
+	function solve()
+	{
+		var a11=parseFloat(document.getElementById("a11").value);
+		var a12=parseFloat(document.getElementById("a12").value);
+		var b1=parseFloat(document.getElementById("b1").value);
+		var a21=parseFloat(document.getElementById("a21").value);
+		var a22=parseFloat(document.getElementById("a22").value);
+		var b2=parseFloat(document.getElementById("b2").value);
+		/*
+		a11 a12 b1
+		a21 a22 b2
+		*/
+		var x=document.getElementById("x");
+        var y=document.getElementById("y"); 
+		var x=((b1*a22-b2*a12)/(a11*a22-a12*a22));
+		var y=((a11*b2-a21*b1)/(a11*a22-a21*a12));
+	}
+	</script>
+	<form>
+	Please enter coefficient<br/>
+	<input id="a11" type="text" value="" size="3"/>x  
+	<input id="a12" type="text" value="" size="3"/>y=
+	<input id="b1" type="text" value="" size="3"/>
+	<br/><br/>
+	<input id="a21" type="text" value="" size="3"/>x  
+	<input id="a22" type="text" value="" size="3"/>y=
+	<input id="b2" type="text" value="" size="3"/>
+	<br/><br/>
+	x=<input id="x" type="text" value="" size="17"/>
+	y=<input id="y" type="text" value="" size="17"/><br/><br/>
+	<input id="do" type="button" value="解" onclick="solve()"/>
+	<input type="reset" value="清除"/>
+</form>
+	
+	
+</body>
+
+	</html>

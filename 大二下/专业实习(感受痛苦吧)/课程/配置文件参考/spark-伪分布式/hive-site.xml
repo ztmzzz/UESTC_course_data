@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<!-- hive元数据的存储位置 -->
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://Pspark:3306/hivemetadata?createDatabaseIfNotExist=true&amp;useSSL=false</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>root</value>
+		
+	</property>
+<!-- 连接数据库的口令 -->
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>123456</value>
+	</property>
+	<property>
+<!-- 数据默认的存储位置(HDFS) -->
+		<name>hive.metastore.warehouse.dir</name>
+		<value>/user/hive/warehouse</value>
+	</property>
+	<property>
+<!-- 在命令行中，显示当前操作的数据库 -->
+		<name>hive.cli.print.current.db</name>
+		<value>true</value>
+		
+	</property>
+	<property>
+<!-- 在命令行中，显示数据的表头 -->
+		<name>hive.cli.print.header</name>
+		<value>true</value>
+	</property>
+<!--指定metastore地址，之前添加过可以不不⽤用添加 -->
+<!--	<property>
+		<name>hive.metastore.uris</name>
+		<value>thrift://work02:9083,thrift://work03:9083</value>
+	</property>
+-->
+	<property>
+		<name>hive.metastore.client.socket.timeout</name>
+		<value>3600</value>
+	</property>
+	
+	
+	
+	
+</configuration>

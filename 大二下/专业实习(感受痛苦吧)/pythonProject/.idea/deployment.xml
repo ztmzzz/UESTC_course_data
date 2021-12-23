@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ztm@192.168.1.236:22" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="ztm@192.168.1.236:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_907" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ztm@www.jiayin.tk:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_737" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

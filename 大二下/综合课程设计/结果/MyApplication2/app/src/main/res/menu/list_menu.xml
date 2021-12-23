@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/uploadfile"
+        android:title="上传文件"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/createfolder"
+        android:title="新建文件夹"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/paste"
+        android:title="粘贴"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/refresh"
+        android:title="刷新"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/exit"
+        android:title="退出"
+        app:showAsAction="never"/>
+</menu>

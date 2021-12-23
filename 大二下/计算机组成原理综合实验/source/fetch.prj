@@ -1,0 +1,6 @@
+verilog work "pc.v"
+verilog work "mux32.v"
+verilog work "extnd2.v"
+verilog work "and.v"
+verilog work "add.v"
+verilog work "fetch.v"

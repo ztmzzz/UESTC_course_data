@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志愿模拟填报</title>
+    <style>
+        .juzhong {
+
+            width: 760px;
+            height: 660px;
+            position: absolute;
+            right: 300px;
+            top: 305px;
+
+        }
+
+        .zhongjian {
+            text-align: center;
+
+        }
+
+        body {
+            background: url("static/背景.jpg") no-repeat center center; /*加载背景图*/ /* 背景图不平铺 */
+            background-size: cover; /* 让背景图基于容器大小伸缩 */
+            background-attachment: fixed; /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+        / /此条属性必须设置否则可能无效/ background-color: #CCCCCC; /* 设置背景颜色，背景图加载过程中会显示背景色 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="zhongjian"><img src="static/志愿填报指南2.jpg" alt=""></div>
+
+<div class="juzhong">
+    <div><h3 style="color: white;">2021志愿模拟填报</h3></div>
+    <table width="800" style="color: white;">
+
+        <form method='POST' , action="/predict">
+            <tr>
+                <td>省份：</td>
+                <td>
+                    <select name="province" id="">
+                        <option value="甘肃">甘肃</option>
+                        <option value="黑龙江">黑龙江</option>
+                        <option value="吉林">吉林</option>
+                        <option value="辽宁">辽宁</option>
+                        <option value="河北">河北</option>
+                        <option value="陕西">陕西</option>
+                        <option value="山西">山西</option>
+                        <option value="河南">河南</option>
+                        <option value="江苏">江苏</option>
+                        <option value="安徽">安徽</option>
+                        <option value="四川">四川</option>
+                        <option value="湖北">湖北</option>
+                        <option value="浙江">浙江</option>
+                        <option value="福建">福建</option>
+                        <option value="广东">广东</option>
+                        <option value="贵州">贵州</option>
+                        <option value="云南">云南</option>
+                        <option value="江西">江西</option>
+                        <option value="山东">山东</option>
+                        <option value="青海">青海</option>
+                        <option value="湖南">湖南</option>
+                        <option value="海南">海南</option>
+                        <option value="台湾">台湾</option>
+                        <option value="新疆">新疆</option>
+                        <option value="西藏">西藏</option>
+                        <option value="内蒙古">内蒙古</option>
+                        <option value="广西">广西</option>
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="重庆">重庆</option>
+                        <option value="天津">天津</option>
+                        <option value="香港">香港</option>
+                        <option value="澳门">澳门</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>文理科：</td>
+                <td>
+                    <select name="wenli" id="">
+                        <option value="文科">文科</option>
+                        <option value="理科">理科</option>
+                        <option value="综合">综合</option>
+                    </select></td>
+            </tr>
+
+
+            <tr>
+                <td>分数：</td>
+                <td><textarea name="score"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="点击提交"></td>
+
+            </tr>
+        </form>
+
+
+        <tr>
+            <td></td>
+            <td><input type="checkbox" checked="checked">我同意使用说明条款</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><h2>使用说明</h2></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <ul>
+                    <li>本查询系统信息仅具体数据仅供参考</li>
+                    <li>本查询系统仅用于UESTC高考志愿查询预测系统制作小组测试使用</li>
+
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

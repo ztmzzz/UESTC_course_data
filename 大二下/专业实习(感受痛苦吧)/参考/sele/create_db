@@ -1,0 +1,13 @@
+CREATE TABLE major_line_2018(
+    id int primary key auto_increment,
+    school_name VARCHAR(100),
+    province VARCHAR(100),
+    exam_type  VARCHAR(100),
+    year VARCHAR(100),
+    max_score VARCHAR(100),
+    average VARCHAR(100),
+    min_score VARCHAR(100),
+    batch VARCHAR(100),
+    major_name VARCHAR(100),
+    search_word VARCHAR(100)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

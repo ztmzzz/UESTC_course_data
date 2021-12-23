@@ -1,0 +1,28 @@
+各省分数线
+省份	批次	分数
+
+学校总体分数线
+学校名	省份	年份	批次	招生类型	最低分	最低位次
+                     			  type
+学校专业情况
+学校名	专业名	专业所属学科
+            subjectCategory
+学校专业分数
+学校名	专业名	省份	年份	文理科	批次	计划招生数	平均分	最低分	最低位次
+    subject province year   wenli   batch   enroll  avgScore    lowScore    lowRank
+
+学校情况
+学校名	地理位置	官网	电话	邮箱	创建时间	占地面积	男女比例	就业率	学校校徽url
+    address    website phone   email   builtDate   area    mfRate  employmentRate  picUrl
+
+special 专业组
+
+爬下来的数据
+
+学校 省份 年份 文理 批次 类型 最低分 最低位次 省控线 (选课要求)
+				       provinceLine
+				
+学校 省份 年份 文理 批次 专业 学科门类 计划招生数 学制 (专业组 选课要求)
+					learnYear		needs
+
+学校 省份 年份 文理 批次 专业 平均分 最低分 最低位次 (专业组 选课要求)
