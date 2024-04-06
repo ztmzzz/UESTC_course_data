@@ -1,0 +1,27 @@
+
+NET sys_Clock  LOC = D11;
+
+#Buttons
+NET BTN_Clock LOC = E6;  //btn(0)
+NET BTN_Reset LOC = D5;  //btn(1)
+#Leds
+NET LED0 LOC=W3;
+NET LED1 LOC=Y4;
+
+##### 7-seg anode #####
+NET AN_SEL(0) LOC = M17; # 7-seg AN1
+NET AN_SEL(1) LOC = AA20; # 7-seg AN4
+NET AN_SEL(2) LOC = AB21; # 7-seg AN5
+NET AN_SEL(3) LOC = N16; # 7-seg AN2
+NET AN_SEL(4) LOC = P19; # 7-seg AN3
+NET AN_SEL(5) LOC = P16; # 7-seg AN0
+
+##### 7-seg display #####
+NET seg(0) LOC=AA21; # 7-seg CA
+NET seg(1) LOC=AA22; # 7-seg CB
+NET seg(2) LOC=Y22; # 7-seg CC
+NET seg(3) LOC=N15; # 7-seg CD
+NET seg(4) LOC=AB19; # 7-seg CE
+NET seg(5) LOC=P20; # 7-seg CF
+NET seg(6) LOC=Y21; # 7-seg CG
+NET seg(7) LOC=P15; # 7-seg DP

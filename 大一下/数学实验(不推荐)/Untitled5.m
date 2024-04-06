@@ -1,0 +1,1 @@
+linprog([1/(b+d) 1/(b+d)],[],[],[d -b],[-c*0*b+a*0*d],[xmin ymin],[xmax ymax])-0*(a+c)/(b+d)

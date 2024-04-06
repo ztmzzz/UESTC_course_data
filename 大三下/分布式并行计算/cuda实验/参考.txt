@@ -1,0 +1,2 @@
+https://www.overleaf.com/articles/the-parallelization-and-optimization-of-the-n-body-problem-using-openmp-and-cuda/jpkcgbptkvby
+https://localcoder.org/n-body-cuda-optimization

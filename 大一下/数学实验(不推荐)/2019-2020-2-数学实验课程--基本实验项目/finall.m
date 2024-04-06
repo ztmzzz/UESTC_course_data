@@ -1,0 +1,72 @@
+N=200;
+%A=0,B=1
+decide=fix(unifrnd(1,3,1,N)/2);
+rate=zeros(1,2000);
+for i=1:2000
+    u=zeros(1,N);
+    %博弈阶段
+    for j=1:N
+        if(j==N)
+            if(decide(N)==0)
+                if(decide(1)==0)
+                    u(N)=u(N)+3;
+                    u(1)=u(1)+3;
+                end
+            else
+                if(decide(1)==0)
+                    u(N)=u(N)+5;
+                    u(1)=u(1)+5;
+                else
+                    u(N)=u(N)+1;
+                    u(1)=u(1)+1;
+                end
+            end
+            continue;
+        end
+        if(decide(j)==0)
+            if(decide(j+1)==0)
+                u(j)=u(j)+3;
+                u(j+1)=u(j+1)+3;
+            end
+        else
+            if(decide(j+1)==0)
+                u(j)=u(j)+5;
+                u(j+1)=u(j+1)+5;
+            else
+                u(j)=u(j)+1;
+                u(j+1)=u(j+1)+1;
+            end
+        end
+    end
+    %决策更新阶段
+    temp=fix(unifrnd(1,3,1,N)/2);
+    p=zeros(1,N);
+    choose=zeros(1,N);
+    %选择邻居
+    for j=1:N
+        if(j==N&&temp(j)==1)
+            choose(j)=1;
+            p(j)=1/(1+exp((u(j)-u(choose(j)))*2));
+            continue;
+        end
+        if(j==1&&temp(j)==0)
+            choose(j)=N;
+            p(j)=1/(1+exp((u(j)-u(choose(j)))*2));
+            continue;
+        end
+        if(temp(j)==0)
+            choose(j)=j-1;
+        else
+            choose(j)=j+1;
+        end
+        p(j)=1/(1+exp((u(j)-u(choose(j)))*2));
+    end
+    %改变决策
+    for j=1:N
+        if(rand<=p(j))
+            decide(j)=decide(choose(j));
+        end
+    end
+    rate(i)=1-(sum(decide)/N);
+end
+plot(1:2000,rate)

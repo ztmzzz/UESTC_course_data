@@ -1,0 +1,27 @@
+syntax = "proto3";
+package kvStore;
+option go_package = "homework/kvStore";
+message setRequest {
+  string key = 1;
+  string value = 2;
+}
+message setResponse {
+  bool success = 1;
+}
+message getRequest {
+  string key = 1;
+}
+message getResponse {
+  string value = 1;
+}
+message deleteRequest {
+  string key = 1;
+}
+message deleteResponse {
+  bool success = 1;
+}
+service kvStore {
+  rpc set(setRequest) returns (setResponse);
+  rpc get(getRequest) returns (getResponse);
+  rpc delete(deleteRequest) returns (deleteResponse);
+}

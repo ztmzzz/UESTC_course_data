@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server0:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: myserver:latest
+    command: [ "0" ]
+    ports:
+      - "9527:8080"
+
+  server1:
+    image: myserver:latest
+    command: [ "1" ]
+    ports:
+      - "9528:8080"
+  server2:
+    image: myserver:latest
+    command: [ "2" ]
+    ports:
+      - "9529:8080"

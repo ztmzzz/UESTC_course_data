@@ -1,0 +1,1 @@
+This is 3 subfolders from the CMU+MIT face detection test set. This is a commonly used benchmark. list.html contains the ground truth bounding boxes for all of the faces.

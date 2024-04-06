@@ -1,0 +1,93 @@
+@startuml
+CloudDriver *-- File
+CloudDriver *-- User
+class CloudDriver {
+  file:File
+  user:User
+}
+File ..> User
+class File{
+  name:String
+  size:Integer
+  selected:Bool
+  + upload():Bool
+  + download():Bool
+  + delete():Bool
+  + share(User):void
+}
+FileCreator ..> File
+abstract class FileCreator{
+  + creatFile():File
+}
+FileCreator <|-- VideoCreator
+class VideoCreator{
+  + creatFile():Video
+}
+FileCreator <|-- ImageCreator
+class ImageCreator{
+  + creatFile():Image
+}
+Image ..|> Multimedia
+Video ..|> Multimedia
+interface Multimedia{
+  + show():void
+}
+File <|-- Image
+class Image{
+  + generateThumbnail():void
+  + show():void
+}
+File <|-- Video
+class Video{
+  + generateThumbnail():void
+  + show():void
+}
+Image ..|> Thumbnail
+Video ..|> Thumbnail
+interface Thumbnail{
+  + generateThumbnail():void
+}
+VideoTranscoder ..> Video
+class VideoTranscoder {
+  - instance:VideoTranscoder
+  - VideoTranscoder()
+  + get­Instance():VideoTranscoder
+  + transcode(Video):Video
+}
+ContentCensor ..> File
+class ContentCensor{
+  - instance:ContentCensor
+  - ContentCensor()
+  + get­Instance():ContentCensor
+  + review(File):Bool
+}
+ImageClassifier ..> Image
+class ImageClassifier{
+  - instance:ImageClassifier
+  - ImageClassifier()
+  + get­Instance():ImageClassifier
+  + classify(Image):String
+}
+OCRProcessor ..> Image
+class OCRProcessor{
+  - instance:OCRProcessor
+  - OCRProcessor()
+  + get­Instance():OCRProcessor
+  + ocr(Image):String
+}
+ASRProcessor ..> Video
+class ASRProcessor{
+  - instance:ASRProcessor
+  - ASRProcessor()
+  + get­Instance():ASRProcessor
+  + asr(Video):String
+}
+class User{
+  id:Integer
+  name:String
+  password:String
+  + login():Bool
+  + logout():Bool
+  + searchUser(String):User
+}
+@enduml

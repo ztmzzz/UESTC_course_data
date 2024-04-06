@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学校在各省市录取比例</title>
+    <style>
+        body {
+            background: url("static/背景.jpg") no-repeat center center; /*加载背景图*/ /* 背景图不平铺 */
+            background-size: cover; /* 让背景图基于容器大小伸缩 */
+            background-attachment: fixed; /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+        / /此条属性必须设置否则可能无效/ background-color: #CCCCCC; /* 设置背景颜色，背景图加载过程中会显示背景色 */
+        }
+
+        .pp {
+            text-align: center;
+            font-size: 35px;
+
+
+        }
+
+        .zhongjian {
+
+            width: 760px;
+            height: 660px;
+            position: absolute;
+            right: 420px;
+            top: 130px;
+
+        }
+
+        a {
+            text-decoration: none;
+            text-decoration-color: rosybrown;
+
+        }
+
+        a:hover {
+
+            background-color: #ff6f00;
+        }
+    </style>
+</head>
+<body>
+
+<form method='POST' , action="/schoolRate">
+
+
+    <div class="pp" style="color: whitesmoke;">
+        <span style="color: white;">学校and专业在各省的录取占比</span>
+        <br>
+
+        <input name="school" type="text" value="请输入学校名称">
+        <input name="subject" type="text" value="请输入专业名称">
+        <input type='submit' value="提交"/>
+    </div>
+</form>
+
+<hr>
+<div class="zhongjian" style="color: rgb(150, 144, 144);">
+    <div id="container" style="height: 100%"></div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <!-- Uncomment this line if you want to dataTool extension
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+    -->
+    <!-- Uncomment this line if you want to use gl extension
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+    -->
+    <!-- Uncomment this line if you want to echarts-stat extension
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+    -->
+    <!-- Uncomment this line if you want to use map
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/map/js/world.js"></script>
+    -->
+    <!-- Uncomment these two lines if you want to use bmap extension
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=<Your Key Here>"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+    -->
+
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        var data = JSON.parse('{{data | tojson}}');
+        var option;
+
+
+        option = {
+            toolbox: {
+                show: false,
+                feature: {
+                    mark: {show: true},
+                    dataView: {show: true, readOnly: false},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            series: [
+                {
+                    name: '专业录取省份占比',
+                    type: 'pie',
+                    radius: [50, 250],
+                    center: ['50%', '50%'],
+                    roseType: 'area',
+                    itemStyle: {
+                        borderRadius: 8
+                    },
+                    label: {
+                        formatter: '{b}: {@1} ({d}%)'
+                    },
+                    data: data
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+    </script>
+</div>
+</body>
+</html>
